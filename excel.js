@@ -30,7 +30,7 @@ function process(){
                 let process = XLSX.utils.sheet_to_row_object_array(XLSX.read(event.target.result,{type:"binary"}).Sheets[sheet]);
                 // console.log('du lieu xu ly : ',process);
                 this.getkeyname(process)
-                document.getElementById("jsondata").innerHTML = JSON.stringify(process,undefined,4)
+                document.getElementById("jsondata").innerHTML = JSON.stringify(this.getkeyname(process),undefined,4)
             });
             }
         }
